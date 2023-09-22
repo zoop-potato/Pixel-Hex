@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://uth4f0vt7aio"]
+
+[ext_resource type="Script" path="res://drag_camera.gd" id="1_2b675"]
+[ext_resource type="PackedScene" uid="uid://dhdrvdq2u6ffj" path="res://hex_chunk.tscn" id="2_fxcaw"]
+
+[node name="Test root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_2b675")
+drag_scale = 1.0
+
+[node name="Hex Chunk" parent="." instance=ExtResource("2_fxcaw")]
+
+[node name="Hex Chunk2" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 30
+position = Vector2(0, 1280)
+
+[node name="Hex Chunk3" parent="." instance=ExtResource("2_fxcaw")]
+z_index = -10
+position = Vector2(1880, -640)
+
+[node name="Hex Chunk4" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 19
+position = Vector2(1880, 640)
+
+[node name="Hex Chunk5" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 76
+position = Vector2(0, 2560)
+
+[node name="Hex Chunk6" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 56
+position = Vector2(1880, 1920)
+
+[node name="Hex Chunk7" parent="." instance=ExtResource("2_fxcaw")]
+z_index = -21
+position = Vector2(3760, -1280)
+
+[node name="Hex Chunk8" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 8
+position = Vector2(3760, 0)
+
+[node name="Hex Chunk9" parent="." instance=ExtResource("2_fxcaw")]
+z_index = 36
+position = Vector2(3760, 1280)

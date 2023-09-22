@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhdrvdq2u6ffj"]
+
+[ext_resource type="Script" path="res://hex_chunk.gd" id="1_fnr7x"]
+
+[node name="Hex Chunk" type="Node2D"]
+script = ExtResource("1_fnr7x")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdn1svjb7gae5"]
+
+[ext_resource type="Script" path="res://grass hex.gd" id="1_8vjv6"]
+[ext_resource type="Texture2D" uid="uid://xhsvf6lwodsj" path="res://godot hex.png" id="1_d4v73"]
+[ext_resource type="Texture2D" uid="uid://kobb2kga8rd8" path="res://hex selected.png" id="2_ahbqn"]
+
+[node name="Grass Hex" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_8vjv6")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+texture = ExtResource("2_ahbqn")
+
+[node name="Grass sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_d4v73")
+
+[node name="Top 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Top 2d Area"]
+position = Vector2(13, -3.75)
+polygon = PackedVector2Array(-28, -13.25, -44.5, 3.25, -29, 18.75, 3, 18.75, 18.5, 3.25, 2, -13.25)
+
+[node name="Left 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left 2d Area"]
+polygon = PackedVector2Array(-32, 0, -32, 15, -16, 31, -16, 15, -31.5, -0.5)
+
+[node name="Middle 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Middle 2d Area"]
+polygon = PackedVector2Array(-16, 15, -16, 31, -15, 32, 15, 32, 16, 31, 16, 15)
+
+[node name="Right 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right 2d Area"]
+polygon = PackedVector2Array(32, 0, 32, 15, 16, 31, 16, 15, 31.5, -0.5)
+
+[connection signal="mouse_entered" from="Top 2d Area" to="." method="_on_top_2d_area_mouse_entered"]
+[connection signal="mouse_exited" from="Top 2d Area" to="." method="_on_top_2d_area_mouse_exited"]
+[connection signal="mouse_entered" from="Left 2d Area" to="." method="_on_left_2d_area_mouse_entered"]
+[connection signal="mouse_exited" from="Left 2d Area" to="." method="_on_left_2d_area_mouse_exited"]
+[connection signal="mouse_entered" from="Middle 2d Area" to="." method="_on_middle_2d_area_mouse_entered"]
+[connection signal="mouse_exited" from="Middle 2d Area" to="." method="_on_middle_2d_area_mouse_exited"]
+[connection signal="mouse_entered" from="Right 2d Area" to="." method="_on_right_2d_area_mouse_entered"]
+[connection signal="mouse_exited" from="Right 2d Area" to="." method="_on_right_2d_area_mouse_exited"]

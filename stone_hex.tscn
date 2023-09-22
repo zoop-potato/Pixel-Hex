@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwd63xwfsl58"]
+
+[ext_resource type="Texture2D" uid="uid://cgmwx41flngxp" path="res://Stone Hex.png" id="1_rjkof"]
+
+[node name="Stone Hex" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Stone Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_rjkof")
+
+[node name="Top 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Top 2d Area"]
+position = Vector2(13, -3.75)
+polygon = PackedVector2Array(-28, -13.25, -44.5, 3.25, -29, 18.75, 3, 18.75, 18.5, 3.25, 2, -13.25)
+
+[node name="Left 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left 2d Area"]
+polygon = PackedVector2Array(-32, 0, -32, 15, -16, 31, -16, 15, -31.5, -0.5)
+
+[node name="Middle 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Middle 2d Area"]
+polygon = PackedVector2Array(-16, 15, -16, 31, -15, 32, 15, 32, 16, 31, 16, 15)
+
+[node name="Right 2d Area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right 2d Area"]
+polygon = PackedVector2Array(32, 0, 32, 15, 16, 31, 16, 15, 31.5, -0.5)
